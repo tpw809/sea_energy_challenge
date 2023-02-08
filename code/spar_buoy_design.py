@@ -52,8 +52,13 @@ v_float = np.pi * radius**2 * h_submerged
 
 # Balance of Forces:
 
-F_bouy = v_float / L_to_m3 * rho_sw
-print(f"F_buoy = {F_bouy} [kg]")
+# [N], force of gravity (weight)
+F_grav = m_total * grav
+print(f"F_grav = {F_grav} [N]")
+
+# [N], bouyant force (weight of displaced water)
+F_buoy = grav * v_float / L_to_m3 * rho_sw
+print(f"F_buoy = {F_buoy} [N]")
 
 
 # water pressure
