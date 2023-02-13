@@ -61,9 +61,9 @@ F_buoy = grav * v_float / L_to_m3 * rho_sw
 print(f"F_buoy = {F_buoy} [N]")
 
 
-# water pressure
-pressure = rho_sw * grav * h_submerged
-
+# [N/m^2] = [Pa] water pressure at max depth
+max_pressure = (rho_sw / L_to_m3) * grav * h_submerged
+print(f"max_pressure = {max_pressure} [Pa]")
 
 # Design Criteria:
 # -buoy must float
