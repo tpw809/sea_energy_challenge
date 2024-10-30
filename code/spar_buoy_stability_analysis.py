@@ -28,6 +28,7 @@ d_bal = draft / 2.0
 # [m], distance from center of buoyancy to payload cg:
 d_pl = freeboard + (draft / 2.0)
 
+# stability margin = m_ballast / (m_payload * (d_pl / d_bal))
 # [kg], ballast mass required to satisfy stability margin:
 m_ballast = stability_margin * m_payload * (d_pl / d_bal)
 print(f"m_ballast = {m_ballast} [kg]")

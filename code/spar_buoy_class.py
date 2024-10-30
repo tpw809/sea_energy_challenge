@@ -10,6 +10,16 @@ g = 9.8
 rho_sw = 1025.0
 
 
+def stability_margin(m_bal, m_pl, d_bal, d_pl):
+    """
+    m_bal = ballast mass
+    m_pl = payload mass
+    d_bal = distance from ballast center of mass to center of buoyancy
+    d_pl = distance from payload center of mass to center of buoyancy
+    """
+    return m_bal * d_bal / (m_pl * d_pl)
+
+
 class SparBuoy:
     def __init__(self, 
                  name='defaultSparBuoy',
